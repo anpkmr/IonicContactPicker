@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-akContactPicker" version="1.0.0">
+  
+  
+   <name>AKContactPicker</name>
+  
+  
+   <js-module name="AKContactPicker" src="www/AKContactPicker.js">
+      <!-- <clobbers target="cordova.plugins.AKContactPicker" /> -->
+       <clobbers target="AKContactPicker" />
+   </js-module>
+  
+  
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="AKContactPicker">
+            <param name="ios-package" value="AKContactPicker" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/AKContactPicker.m" />
+   </platform>
+</plugin>

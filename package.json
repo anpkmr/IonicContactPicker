@@ -1,0 +1,19 @@
+{
+  "name": "akcontactpicker",
+  "version": "1.0.0",
+  "description": "Contact picker for ios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ionic",
+    "Cordova",
+    "contact",
+    "custom",
+    "picker",
+    "contactshower"
+  ],
+  "author": "Anoop Kumar",
+  "license": "ISC"
+}
