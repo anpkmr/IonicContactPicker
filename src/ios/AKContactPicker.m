@@ -28,17 +28,16 @@
 // }
 
 - (void)add:(CDVInvokedUrlCommand*)command {
-    NSLog("Vlaue here is ===%@",command);
-    CDVPluginResult *ploginResult = nil;
-    if ([command.arguments length] > 0) {
-        NSNumber *param1 = [[command.parameters objectAtIndex:0] valueForKey:@"param1"];
-        NSNumber *param2 = [[command.parameters objectAtIndex:1]valueForKey:@"param2"];
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[NSString stringWithFormat:@"%d",param1+param2]];
+    NSLog(@"Vlaue here is ===%@",command.arguments);
+    CDVPluginResult *pluginResult = nil;
+    if ([command.arguments count] > 0) {
+        NSNumber *param1 = [[command.arguments objectAtIndex:0] valueForKey:@"param1"];
+        NSNumber *param2 = [[command.arguments objectAtIndex:0]valueForKey:@"param2"];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[NSString stringWithFormat:@"%ld",param1.integerValue+param2.integerValue]];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
     }
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    
 }
 
 @end
