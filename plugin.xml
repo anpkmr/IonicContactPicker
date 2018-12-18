@@ -18,5 +18,6 @@
          </feature>
       </config-file>
       <source-file src="src/ios/AKContactPicker.m" />
+      <resource-file src="src/ios/MainViewController.xib"/>
    </platform>
 </plugin>
